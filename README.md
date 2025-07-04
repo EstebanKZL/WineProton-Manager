@@ -14,7 +14,7 @@
 - Multiplataforma (Linux/Windows)  
 
 🖼️ **Captura**:  
-![Screenshot](docs/screenshot.png) *(Añadir imagen real luego)*  
+![Screenshot](docs/screenshot.png)
 
 ---
 
