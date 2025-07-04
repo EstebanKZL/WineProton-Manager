@@ -11,7 +11,7 @@
 - Instalación automatizada de componentes via Winetricks  
 - Soporte para programas personalizados (.exe/.msi)  
 - Interfaz intuitiva con temas claro/oscuro  
-- Multiplataforma (Linux/Windows)  
+- Plataforma (Linux)  
 
 🖼️ **Captura**:  
 ![Screenshot](docs/screenshot.png)
@@ -31,4 +31,4 @@ cd WineProton-Manager
 pip install -r requirements.txt
 
 # Ejecutar
-python3 wine_installer.py
+python3 WineProton Manager.py
