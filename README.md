@@ -24,11 +24,11 @@
 sudo apt install wine winetricks konsole  # Para Linux
 
 # Clonar repositorio
-git clone https://github.com/tu-usuario/WineProton-Manager.git
+git clone https://github.com/EstebanKZL/WineProton-Manager.git
 cd WineProton-Manager
 
 # Instalar dependencias
 pip install -r requirements.txt
 
 # Ejecutar
-python3 WineProton Manager.py
+python3 WineProton-Manager.py
