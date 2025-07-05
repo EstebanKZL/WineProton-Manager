@@ -37,7 +37,6 @@ Creación de AppImage
    
    ```bash
    mkdir -p AppDir/usr/bin
-   chmod +x AppDir/AppRun
    cp src/WineProtonManager.py AppDir/usr/bin/
    chmod +x AppDir/usr/bin/WineProtonManager.py
    
@@ -50,6 +49,7 @@ Creación de AppImage
    exec python3 "$HERE/usr/bin/WineProtonManager.py" "$@"
    exec "$HERE/usr/bin/WineProtonManager.py" "$@"
    EOF
+   chmod +x AppDir/AppRun
    
 4. Construye la AppImage:
 
