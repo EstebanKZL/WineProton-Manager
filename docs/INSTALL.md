@@ -54,7 +54,7 @@ Creación de AppImage
 4. Construye la AppImage:
 
    ```bash
-   ./linuxdeploy-x86_64.AppImage --appdir AppDir -e src/WineProtonManagericon.py -i icons/WineProtonManagericon.png -d AppDir/WineProtonManager.desktop
+   ./linuxdeploy-x86_64.AppImage --appdir AppDir -i icons/WineProtonManagericon.png -d AppDir/WineProtonManager.desktop
    ./appimagetool-x86_64.AppImage AppDir
 
 5. Ejecutar programa
