@@ -1,18 +1,16 @@
-# Archivos de configuración local
-*.local
-*.log
-*.json
-
-# Archivos generados por Python
-__pycache__/
+echo "__pycache__/
 *.pyc
 *.pyo
 *.pyd
-
-# Entornos virtuales
-venv/
-.env/
-
-# Archivos de sistema
 .DS_Store
-Thumbs.db
+.idea/
+venv/
+*.log
+*.tmp
+*.bak
+*.swp
+*.swo
+*.spec
+/dist/
+/build/
+/WineProtonManager.egg-info/" > .gitignore
