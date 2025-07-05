@@ -36,16 +36,9 @@ Creación de AppImage
    wget https://github.com/linuxdeploy/linuxdeploy/releases/download/continuous/linuxdeploy-x86_64.AppImage
    chmod +x linuxdeploy-x86_64.AppImage
    wget https://github.com/AppImage/AppImageKit/releases/download/continuous/appimagetool-x86_64.AppImage
-   chmod +x appimagetool-x86_64.AppImage
+   chmod +x appimagetool-x86_64.AppImage   
    
-2. Copiar programa
-   
-   ```bash
-   mkdir -p AppDir/usr/bin
-   cp src/WineProtonManager.py AppDir/usr/bin/
-   chmod +x AppDir/usr/bin/WineProtonManager.py
-   
-3. Crear AppDir/AppRun
+2. Crear AppDir/AppRun
 
    ```bash
    cat << 'EOF' > AppDir/AppRun
@@ -55,14 +48,14 @@ Creación de AppImage
    EOF
    chmod +x AppDir/AppRun
    
-4. Construye la AppImage:
+3. Construye la AppImage:
 
    ```bash
    pyinstaller --onefile --icon=src/WineProtonManager.ico src/WineProtonManager.py
    ./linuxdeploy-x86_64.AppImage --appdir AppDir -e dist/WineProtonManager -i icons/WineProtonManager.png -d AppDir/WineProtonManager.desktop
    ARCH=x86_64 ./appimagetool-x86_64.AppImage AppDir
 
-5. Ejecutar programa
+4. Ejecutar programa
    
    ```bash
    ./WineProtonManager-v1.1.0-x86_64.AppImage
