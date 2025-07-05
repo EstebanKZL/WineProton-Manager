@@ -1,12 +1,14 @@
+from setuptools import setup, find_packages
+
 setup(
     name="WineProtonManager",
-    version="1.1.0",
-    description="Gestor de entornos Wine/Proton para Linux con interfaz Qt",
+    version="1.0.0",
+    description="Advanced Wine and Proton environment manager for Linux",
     long_description=open('README.md').read(),
     long_description_content_type='text/markdown',
-    author="EstebanKZL",
+    author="Tu Nombre",
     author_email="tu@email.com",
-    url="https://github.com/EstebanKZL/WineProtonManager",
+    url="https://github.com/tuusuario/WineProtonManager",
     packages=find_packages(),
     install_requires=[
         'PyQt5>=5.15.0',
@@ -27,3 +29,4 @@ setup(
         'Topic :: System :: Systems Administration',
     ],
 )
+4. .gitignore
