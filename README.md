@@ -3,7 +3,7 @@
 ![Python](https://img.shields.io/badge/python-3.8+-blue.svg)
 ![PyQt5](https://img.shields.io/badge/PyQt5-5.15+-green.svg)
 ![License](https://img.shields.io/badge/license-GPLv3-orange.svg)
-![Logo](icons/WineProtonManager.svg)
+![Logo](icons/WineProtonManagericon.svg)
 
 ## **Herramienta GUI para gestionar entornos Wine/Proton e instalar componentes con interfaz gráfica Qt.**  
 
