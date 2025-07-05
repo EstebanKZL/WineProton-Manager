@@ -21,19 +21,7 @@
 3. Ejecuta la aplicación:
 
    ```bash
-   python3 src/wineprotonmanager.py
-
-Instalación como paquete del sistema
-
-1. Instala con pip:
-
-   ```bash
-   pip install .
-
-2. Ejecuta desde cualquier lugar:
-
-   ```bash
-   wineprotonmanager
+   python3 src/WineProtonManager.py
 
 Creación de AppImage
 
@@ -46,4 +34,4 @@ Creación de AppImage
 2. Construye la AppImage:
 
    ```bash
-   ./linuxdeploy-x86_64.AppImage --appdir AppDir -e src/wineprotonmanager.py -i icons/wineprotonmanager.svg -d AppDir/wineprotonmanager.desktop
+   ./linuxdeploy-x86_64.AppImage --appdir AppDir -e src/WineProtonManager.py -i icons/WineProtonManager.svg -d AppDir/WineProtonManager.desktop
