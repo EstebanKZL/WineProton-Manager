@@ -9,6 +9,9 @@
 
 ## Instalación desde código fuente
 
+
+Ejecutar aplicación
+
 1. Clona el repositorio:
    ```bash
    git clone https://github.com/EstebanKZL/WineProtonManager.git
@@ -22,6 +25,7 @@
 
    ```bash
    python3 src/WineProtonManager.py
+
 
 Creación de AppImage
 
