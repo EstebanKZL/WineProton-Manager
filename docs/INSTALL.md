@@ -49,7 +49,6 @@ Creación de AppImage
    cat << 'EOF' > AppDir/AppRun
    #!/bin/bash
    HERE="$(dirname "$(readlink -f "$0")")"
-   exec python3 "$HERE/usr/bin/WineProtonManager.py" "$@"
    exec "$HERE/usr/bin/WineProtonManager.py" "$@"
    EOF
    chmod +x AppDir/AppRun
