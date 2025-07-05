@@ -1,10 +1,8 @@
-### 4. **Subir el proyecto a GitHub**
-```bash
-# Configurar repositorio remoto
-git remote add origin https://github.com/EstebanKZL/WineProtonManager.git
+GNU GENERAL PUBLIC LICENSE
+Version 3, 29 June 2007
 
-# Subir cambios
-git push -u origin main
+Copyright (C) 2007 Free Software Foundation, Inc. <https://fsf.org/>
+Everyone is permitted to copy and distribute verbatim copies
+of this license document, but changing it is not allowed.
 
-# Si usas master en lugar de main:
-git branch -M main  # Renombrar si es necesario
+[El texto completo de la licencia GPL-3.0]
