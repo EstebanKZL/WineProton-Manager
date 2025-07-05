@@ -2,7 +2,7 @@ from setuptools import setup, find_packages
 
 setup(
     name="WineProtonManager",
-    version="1.0.0",
+    version="1.1.0",
     description="Advanced Wine and Proton environment manager for Linux",
     long_description=open('README.md').read(),
     long_description_content_type='text/markdown',
