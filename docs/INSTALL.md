@@ -11,7 +11,7 @@
 
 1. Clona el repositorio:
    ```bash
-   git clone https://github.com/tuusuario/WineProtonManager.git
+   git clone https://github.com/EstebanKZL/WineProtonManager.git
    cd WineProtonManager
 
 2. Instala las dependencias:
