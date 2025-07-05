@@ -9,9 +9,9 @@
 🔧 **Características principales**:  
 - Gestión de múltiples prefixes (Wine y Proton)  
 - Instalación automatizada de componentes via Winetricks  
-- Soporte para programas personalizados (.exe/.msi)  
+- Soporte para programas personalizados (.exe/.msi)
+- Visualización detallada de entornos  
 - Interfaz intuitiva con temas claro/oscuro
-- Visualización detallada de entornos
 - Plataforma (Linux)  
 
 🖼️ **Captura**:  
