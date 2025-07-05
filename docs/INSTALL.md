@@ -11,5 +11,39 @@
 
 1. Clona el repositorio:
    ```bash
-   git clone https://github.com/EstebanKZ/WineProtonManager.git
+   git clone https://github.com/tuusuario/WineProtonManager.git
    cd WineProtonManager
+
+2. Instala las dependencias:
+   ```bash
+   pip install -r requirements.txt
+
+3. Ejecuta la aplicación:
+
+   ```bash
+   python3 src/wineprotonmanager.py
+
+Instalación como paquete del sistema
+
+1. Instala con pip:
+
+   ```bash
+   pip install .
+
+2. Ejecuta desde cualquier lugar:
+
+   ```bash
+   wineprotonmanager
+
+Creación de AppImage
+
+1. Instala linuxdeployqt:
+
+   ```bash
+   wget https://github.com/linuxdeploy/linuxdeploy/releases/download/continuous/linuxdeploy-x86_64.AppImage
+   chmod +x linuxdeploy-x86_64.AppImage
+   
+2. Construye la AppImage:
+
+   ```bash
+   ./linuxdeploy-x86_64.AppImage --appdir AppDir -e src/wineprotonmanager.py -i icons/wineprotonmanager.svg -d AppDir/wineprotonmanager.desktop
