@@ -9,7 +9,6 @@
 
 ## Instalación desde código fuente
 
-
 Ejecutar aplicación
 
 1. Clona el repositorio:
