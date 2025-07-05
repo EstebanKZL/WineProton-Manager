@@ -4,4 +4,4 @@ Name=WineProtonManager-v1.1.0
 Exec=WineProtonManager
 Icon=WineProtonManager
 Categories=Utility;
-Comment=Configurador de WINE/Proton para Steam Deck
+Comment=Herramienta GUI para gestionar entornos Wine/Proton
