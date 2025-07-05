@@ -3,6 +3,7 @@
 ![Python](https://img.shields.io/badge/python-3.8+-blue.svg)
 ![PyQt5](https://img.shields.io/badge/PyQt5-5.15+-green.svg)
 ![License](https://img.shields.io/badge/license-GPLv3-orange.svg)
+![Logo](icons/WineProtonManager.svg)
 
 **Herramienta GUI para gestionar entornos Wine/Proton e instalar componentes con interfaz gráfica Qt.**  
 
@@ -26,13 +27,16 @@
 - Winetricks
 
 ## 🚀 Instalación  
-```bash
-# Requisitos previos
-sudo apt install wine winetricks konsole  # Para Linux
+    ```bash
+    # Requisitos previos
+    sudo apt install wine winetricks konsole  # Para Linux
+    
+    # Clonar repositorio
+    git clone https://github.com/EstebanKZL/WineProtonManager.git
+    cd WineProton-Manager
 
-# Clonar repositorio
-git clone https://github.com/EstebanKZL/WineProtonManager.git
-cd WineProton-Manager
+## Licencia
+Este proyecto está licenciado bajo [GPL-3.0](LICENSE).
 
 # Instalar dependencias
 pip install -r requirements.txt
