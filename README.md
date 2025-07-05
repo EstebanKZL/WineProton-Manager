@@ -33,13 +33,13 @@
     
     # Clonar repositorio
     git clone https://github.com/EstebanKZL/WineProtonManager.git
-    cd WineProton-Manager
+    cd WineProtonManager
+
+    # Instalar dependencias
+    pip install -r requirements.txt
+    
+    # Ejecutar
+    python3 src/WineProtonManager.py
 
 ## Licencia
 Este proyecto está licenciado bajo [GPL-3.0](LICENSE).
-
-# Instalar dependencias
-pip install -r requirements.txt
-
-# Ejecutar
-python3 WineProtonManager.py
