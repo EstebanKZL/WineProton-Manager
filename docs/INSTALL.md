@@ -30,7 +30,7 @@ Ejecutar aplicación
 
 Creación de AppImage
 
-1. Instala linuxdeployqt:
+1. Instala linuxdeployqt y AppImage:
 
    ```bash
    wget https://github.com/linuxdeploy/linuxdeploy/releases/download/continuous/linuxdeploy-x86_64.AppImage
