@@ -1,0 +1,7 @@
+[Desktop Entry]
+Type=Application
+Name=WineProtonManager-v1.0.0
+Exec=WineProtonManager
+Icon=WineProtonManagericon
+Categories=Utility;
+Comment=Configurador de WINE/Proton para Steam Deck
