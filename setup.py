@@ -6,9 +6,9 @@ setup(
     description="Advanced Wine and Proton environment manager for Linux",
     long_description=open('README.md').read(),
     long_description_content_type='text/markdown',
-    author="Tu Nombre",
+    author="EstebanKZL",
     author_email="tu@email.com",
-    url="https://github.com/tuusuario/WineProtonManager",
+    url="https://github.com/EstebanKZL/WineProtonManager",
     packages=find_packages(),
     install_requires=[
         'PyQt5>=5.15.0',
