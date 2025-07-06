@@ -33,6 +33,10 @@ Creación de AppImage
 1. Instala linuxdeployqt y AppImage:
 
    ```bash
+   sudo apt update && apt upgrade -y
+   sudo apt install wine winetricks konsole kdialog libssl3
+   git clone https://github.com/EstebanKZL/WineProtonManager.git
+   cd WineProtonManager
    wget https://github.com/linuxdeploy/linuxdeploy/releases/download/continuous/linuxdeploy-x86_64.AppImage
    chmod +x linuxdeploy-x86_64.AppImage
    wget https://github.com/AppImage/AppImageKit/releases/download/continuous/appimagetool-x86_64.AppImage
@@ -51,7 +55,7 @@ Creación de AppImage
 3. Construye la AppImage:
 
    ```bash
-   pyinstaller --onefile --add-binary '/usr/lib/x86_64-linux-gnu/libssl.so.3:.' --add-binary '/usr/lib/x86_64-linux-gnu/libcrypto.so.3:.' src/WineProtonManager.py
+   pyinstaller --onefile --add-binary '/usr/lib/x86_64-linux-gnu/libssl.so.3:.' --add-binary '/usr/lib/x86_64-linux-gnu/libcrypto.so.3:.' --add-binary '/usr/lib/x86_64-linux-gnu/libcurl.so.4:.'   src/WineProtonManager.py
    ./linuxdeploy-x86_64.AppImage --appdir AppDir -e dist/WineProtonManager -i icons/WineProtonManager.png -d AppDir/WineProtonManager.desktop
    ARCH=x86_64 ./appimagetool-x86_64.AppImage AppDir
 
