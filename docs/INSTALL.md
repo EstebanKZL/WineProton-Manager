@@ -55,7 +55,7 @@ Creación de AppImage
 3. Construye la AppImage:
 
    ```bash
-   pyinstaller --onefile --add-binary '/usr/lib/x86_64-linux-gnu/libssl.so.3:.' --add-binary '/usr/lib/x86_64-linux-gnu/libcrypto.so.3:.' --add-binary '/usr/lib/x86_64-linux-gnu/libcurl.so.4:.'   src/WineProtonManager.py
+   pyinstaller --onefile --add-binary '/usr/lib/x86_64-linux-gnu/libssl.so.3:.' --add-binary '/usr/lib/x86_64-linux-gnu/libcrypto.so.3:.' --add-binary '/usr/lib/x86_64-linux-gnu/libcurl.so.4:.' --add-binary '/usr/lib/x86_64-linux-gnu/libgobject-2.0.so.0:.'  src/WineProtonManager.py
    ./linuxdeploy-x86_64.AppImage --appdir AppDir -e dist/WineProtonManager -i icons/WineProtonManager.png -d AppDir/WineProtonManager.desktop
    ARCH=x86_64 ./appimagetool-x86_64.AppImage AppDir
 
