@@ -479,17 +479,26 @@ class InstallerThread(QThread):
         self.winetricks_path = winetricks_path
 
     def run(self):
+        # Verificar si Konsole está instalado
+        try:
+            subprocess.run(["which", "konsole"], check=True,
+                          stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
+        except Exception:
+            self.error.emit(
+                "Konsole no está instalado. Es necesario para mostrar la consola.\n"
+                "Puede instalarlo con: sudo apt install konsole"
+            )
+            return
+
         for idx, (item_path, item_type) in enumerate(zip(self.items, self.item_types)):
             if not self._is_running:
                 break
 
-            # Mostrar nombre base en la interfaz
             display_name = Path(item_path).name if item_type == "exe" else item_path
             self.progress.emit(idx, f"{display_name}: Instalando...")
             
             try:
                 if item_type == "exe":
-                    # Para EXE/MSI: wine + ruta completa
                     exe_path = Path(item_path)
                     if not exe_path.exists():
                         raise FileNotFoundError(f"El archivo no existe:\n{exe_path}")
@@ -507,17 +516,16 @@ class InstallerThread(QThread):
                         str(exe_path.absolute())
                     ]
                 else:
-                    # Para Winetricks: usar la ruta obtenida del config manager
                     cmd = [
                         "konsole",
                         "--hold",
                         "-e",
-                        self.winetricks_path,  # Ya viene con la ruta correcta
+                        self.winetricks_path,
                         "--force",
-                        item_path  # Nombre del componente
+                        item_path
                     ]
                     if self.silent_mode:
-                        cmd.insert(-1, "-q")  # Añadir -q antes del componente
+                        cmd.insert(-1, "-q")
                 
                 result = subprocess.run(
                     cmd,
@@ -1887,17 +1895,6 @@ class InstallerApp(QWidget):
             QMessageBox.critical(self, "Error", "No hay configuración seleccionada")
             return
 
-        try:
-            subprocess.run(["which", "konsole"], check=True,
-                         stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
-        except Exception:
-            QMessageBox.critical(
-                self, "Error",
-                "Konsole no está instalado. Es necesario para mostrar la consola.\n"
-                "Puede instalarlo con: sudo apt install konsole"
-            )
-            return
-
         prefix_path = Path(config["prefix"])
         if not prefix_path.exists():
             reply = QMessageBox.question(
@@ -1943,24 +1940,19 @@ class InstallerApp(QWidget):
         all_types = []
         
         for row in range(self.items_table.rowCount()):
-            # Obtenemos el nombre del item
             item_name = self.items_table.item(row, 1).text()
             item_type = self.items_table.item(row, 2).text().lower()
             
-            # Buscamos el programa en la lista de custom_programs si es necesario
             if item_type == "exe":
-                # Para programas personalizados, buscamos el path completo en la configuración
                 custom_programs = self.config_manager.get_custom_programs()
                 program_info = next((p for p in custom_programs if p['name'] in item_name), None)
                 if program_info:
                     all_items.append(program_info['path'])
                     all_types.append(program_info['type'])
                 else:
-                    # Si no está en los programas personalizados, asumimos que es un path directo
                     all_items.append(item_name)
                     all_types.append(item_type)
             else:
-                # Para componentes winetricks, usamos el nombre directamente
                 all_items.append(item_name)
                 all_types.append(item_type)
             
